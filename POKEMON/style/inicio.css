@@ -1,0 +1,120 @@
+.Titulo {
+    color: rgb(0, 0, 0);
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    
+}
+
+
+
+.contenedor {
+    display: flex;
+    align-items: left; 
+    justify-content: center; 
+}
+
+.logo2 {
+    display: flex;
+    align-items: left; 
+    justify-content: center; 
+}
+
+
+.Logo {
+  width: 700px;
+  margin: 100px auto;
+  display: flex;
+}
+
+.FondoInicio {
+  height: 450px;
+  min-width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+
+  background: linear-gradient(
+    90deg,
+    red,
+    orange,
+    yellow,
+    lime,
+    cyan,
+    blue,
+    violet,
+    red
+  );
+
+  background-size: 400% 100%;
+  animation: rgbScroll 10s linear infinite;
+
+  box-shadow: 1px 0.1px 10px rgba(22, 22, 22, 1);
+}
+
+@keyframes rgbScroll {
+  0% {
+    background-position: 0% 0%;
+  }
+  100% {
+    background-position: 100% 0%;
+  }
+}
+
+.boton {
+    width: 500px;
+    font-size: 30px; 
+    font-weight: bold; 
+    letter-spacing: 1px;
+    font-family: 'Courier New', Courier, monospace;
+
+    border-radius: 20px; 
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+    
+    margin: 10px;
+}
+
+.boton:hover {
+    animation: ease-in-out 0.5s;
+      box-shadow:  15px 10px rgba(0, 0, 0, 0.40);
+  transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  
+
+}
+
+.botones {
+    size: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.acordeon-btn {
+      width: 100%;
+      padding: 1.5em;
+      background: #000000;
+      color: white;
+      font-weight: bold;
+      border: none;
+      text-align: left;
+      cursor: pointer;
+      margin-bottom: 5px;
+      border-radius: 10px;
+      font-size: 25px;
+   }
+
+    .acordeon-contenido {  
+        max-height: 0;
+        overflow: hidden;
+        opacity: 0;
+        transition: all 0.5s ease-in-out;
+    }
+    .acordeon-contenido.activo {
+       max-height: 2100px; 
+       opacity: 1; 
+    }
