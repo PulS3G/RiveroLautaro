@@ -3,103 +3,81 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <link rel="stylesheet" href="/POKEMON/style/inicio.css">
-  <link rel="icon" type="Logo" href="/POKEMON/ANEXOS/Poké_Ball_icon.svg.png">
+  <link rel="stylesheet" href="/style/inicio.css">
+  <link rel="stylesheet" href="/style/random.css">
+  <link rel="icon" type="Logo" href="/img/Poké_Ball_icon.svg.png">
   <title>Pokemon</title>
 </head>
 <body>
 
   <div class="FondoInicio">
     <div class="Logo">  
-      <img class="Logo" src="/POKEMON/ANEXOS/p.png">
+      <img class="Logo" src="/img/p.png">
     </div><br>
   </div><br>
+<br>
 
-  <div class="Titulo">
-    <h1>Seleccione Batalla</h1>
-  </div><br>
-
-  <div class="acordeon">
-    <button class="acordeon-btn" onclick="toggleAcordeon('individual')">Batalla Individual</button>
-    <div id="individual" class="acordeon-contenido">
-      <link rel="stylesheet" href="/POKEMON/style/individual.css">
       <div class="contenedorNav" style="background-color: rgb(0, 0, 0); height: 80px;">  
-        <img class="logo2" src="/POKEMON/ANEXOS/p.png" alt="">
-        <div class="NavLinks">
-          <a class="Nav"></a>
-          <a class="Nav"></a>
-        </div>
-      </div><br>
-
-      <h2 class="Titulo">Compara ataques de pokemones</h2>
-      <div class="contenedorInput"><br>
-        <h3 class="TituloIngreso">Ingresa ID Primer Pokemon</h3>
-        <input id="PokemonUno" class="InputPokemon"/>
-
-        <h3 class="TituloIngreso">Ingresa ID Segundo Pokemon</h3>
-        <input id="PokemonDos" class="InputPokemon"/><br><br>
-        <button id="IngresoPokemon" class="boton">Ingresar Pokemones</button>
-      </div>
-
-      <h2 class="Titulo">Pelea de Pokemones</h2>
-      <span class="contenedor">
-        <div class="Tarjeta"><br>
-          <h2 id="TituloPokemonUno" class="TituloPokemon"></h2><br>
-          <img id="ImagenPokemonUno">
-          <ul id="listaPokemonUno" class="listaPokemon"></ul>
-        </div>
-        <h1 style="margin: 30px; font-size: 50px; color: rgb(196, 23, 23);">VS</h1>
-        <div class="Tarjeta"><br>
-          <h2 id="TituloPokemonDos" class="TituloPokemon"></h2><br>
-          <img id="ImagenPokemonDos">
-          <ul id="listaPokemonDos" class="listaPokemon"></ul>
-        </div>
-      </span><br>
-
-      <h2 class="tituloPelea">Pokemon Ganador</h2>
-      <span class="contenedor">
-        <div class="Tarjeta"><br>
-          <h2 id="TituloPokemonGanador" class="TituloPokemon"></h2><br>
-          <img id="ImagenPokemonGanador">
-          <ul id="listaPokemonGanador" class="listaPokemon"></ul>
-        </div>
-      </span>
-    </div>
-
-    <button class="acordeon-btn" onclick="toggleAcordeon('grupo')">Batalla Grupal</button>
-    <div id="grupo" class="acordeon-contenido">
-      <link rel="stylesheet" href="/POKEMON/style/random.css">
-      <div class="contenedorNav" style="background-color: rgb(0, 0, 0); height: 80px;">  
-        <img class="logo2" src="/POKEMON/ANEXOS/p.png" alt="">
+        <img class="logo2" src="/img/p.png" alt="">
         <div class="NavLinks">
           <a class="Nav"></a>
           <a class="Nav"></a>
         </div>
       </div>
+  
+        <div id="grupoUno">  
+            <h5 class="titulo">EQUIPO A </h5>    
+                <div id="tarjetaUno">
 
-      <div id="grupoUno">  
-        <h1 class="Titulo">Grupo 1</h1>      
-        <div id="tarjetaUno"></div>
-        <h4 id='totalUno'></h4>
-      </div>
+                </div>
+            <h4 id='totalUno'></h4>
+        </div>
 
-      <h1 class="VS">VS</h1>
+        <h1 class="VS">VS</h1>
 
-      <div id="grupoDos">
-        <h1 class="Titulo">Grupo 2</h1>
-        <div id="tarjetaDos"></div>
-        <h4 id='totalDos'></h4>
-      </div>
+        <div id="grupoDos">
+            <h5 class="titulo">EQUIPO B</h5>
+                <div id="tarjetaDos">
+  
+                </div>
+            <h4 id='totalDos'></h4>
+        </div>
 
-      <div id="grupoGanador">
-        <h1 class="Ganador">Grupo Ganador</h1>
-        <div id="tarjetaGanadora"></div>
-        <h4 id="totalGanador"></h4>
-      </div>
-    </div>
-  </div>
-  <script src="/POKEMON/fn/acordeon.js" defer></script>
-  <script src="/POKEMON/fn/individual.js" defer></script>
-  <script src="/POKEMON/fn/random.js" defer></script>
+
+        <div class="contenedorUno">
+            <div class="botonTirada">
+                <h4 class="tituloPelea">Tirada Equipo A </h4>
+                    <button id="tiradaUno">Tirada</button>
+                        <div id="dadoUno"></div>
+                        <div id="muestraUno"></div>
+            </div>
+
+            <div class="botonTirada">
+                <h4 class="tituloPelea">Tirada Equipo B</h4>
+                    <button id="tiradaDos">Tirada</button>
+                        <div id="dadoDos"></div>
+                        <div id="muestraDos"></div>
+            </div>
+        </div>
+
+        <div class="boton-pelea">
+            <button id="botonPelea">Iniciar Pelea</button>
+        </div>
+
+        <div id="grupoGanador">
+            <h1 class="Ganador">Equipo Ganador</h1>
+                <h1 id="tituloEquipoGanador"></h1>
+                    <div id="tarjetaGanadora">
+
+                    </div>
+            <div id="totalGanador">
+                
+            </div>
+        </div>
+
+        <div id="resultadoTirada"></div>
+
+  <script src="/fn/random.js" defer></script>
+  <script src="/fn/dados.js"></script>
 </body>
 </html>
