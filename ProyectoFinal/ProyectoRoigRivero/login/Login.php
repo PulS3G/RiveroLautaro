@@ -8,7 +8,7 @@
 </head>
 <body>
   <video autoplay muted loop class="bg-video">
-  <source src="HP4 Race Isle of Man.mp4" type="video/mp4">
+  <source src="*video*" type="video/mp4">
 </video>
 <div class="overlay"></div>
   <div class="container-fluid row">

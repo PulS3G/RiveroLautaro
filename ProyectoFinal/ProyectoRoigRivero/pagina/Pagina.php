@@ -18,7 +18,7 @@ if (!isset($_SESSION["usuarioInicio"])) {
 </head>
 <body>
   <video autoplay muted loop class="bg-video">
-    <source src="Jett Lawrence in HD Slow Motion - Pala 2022.mp4" type="video/mp4" />
+    <source src="*video*" type="video/mp4" />
   </video>
   <div class="overlay"></div>
   <nav class="navbar">
