@@ -5,10 +5,10 @@ class User {
  public function __construct() {
  $this->db = (new Database())->connect();
  }
- public function add($nombre_user, $contrasena) {
- $sql = "INSERT INTO users (nombre_user, contrasena) VALUES (:nombre_user, :contrasena)";
+ public function add($nombre_user, $contrasena, $tipo) {
+ $sql = "INSERT INTO users (nombre_user, contrasena, tipo) VALUES (:nombre_user, :contrasena, :tipo)";
  $stmt = $this->db->prepare($sql);
- $stmt->execute([':nombre_user' => $nombre_user, ':contrasena' => $contrasena]);
+ $stmt->execute([':nombre_user' => $nombre_user, ':contrasena' => $contrasena, ':tipo'=>$tipo]);
  }
  public function getAll() {
  $sql = "SELECT * FROM users";

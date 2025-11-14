@@ -4,7 +4,7 @@ if (session_status() === PHP_SESSION_NONE) {
 }
 
 if (!isset($_SESSION["usuarioInicio"])) {
-    header("Location: Login.php?cerrado=1");
+    header("Location: ../Frontend/Login.php?cerrado=1");
     exit();
 }
 ?>
@@ -17,7 +17,7 @@ if (!isset($_SESSION["usuarioInicio"])) {
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 </head>
 <body>
-    <a class="btn btn-primary" href="Admin.php">Volver</a>
+    <a class="btn btn-primary" href="../Frontend/Admin.php">Volver</a>
   <div class="container-fluid p-4">
     <div class="row">
         <form method="POST" class="col-md-6">
@@ -50,6 +50,10 @@ if (!isset($_SESSION["usuarioInicio"])) {
             <label for="exampleInputPassword1" class="form-label">Peso</label>
             <input type="text" class="form-control" name="peso">
           </div>
+          <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">Imagen</label>
+            <input type="text" class="form-control" name="imagen">
+          </div>
           <button type="submit" class="btn btn-primary" name="guardar">Guardar</button>
         </form>
     </div>
@@ -63,12 +67,12 @@ if (isset($_POST["guardar"])) {
     if (empty($_POST["nombre"]) || empty($_POST["tipo"]) ||
     empty($_POST["cilindrada"]) || empty($_POST["presupuesto"]) ||
     empty($_POST["potencia"]) || empty($_POST["combustible"]) ||
-    empty($_POST["peso"])) {
+    empty($_POST["peso"]) || empty($_POST["imagen"])) {
         echo "Un campo esta vacio";
     }
     else {
         $moto = new Moto();
-        $moto->add($_POST["nombre"],$_POST["tipo"],$_POST["cilindrada"],$_POST["presupuesto"],$_POST["potencia"],$_POST["combustible"],$_POST["peso"]);
+        $moto->add($_POST["nombre"],$_POST["tipo"],$_POST["cilindrada"],$_POST["presupuesto"],$_POST["potencia"],$_POST["combustible"],$_POST["peso"],$_POST["imagen"]);
     }
 }
 ?>

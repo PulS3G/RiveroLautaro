@@ -8,29 +8,30 @@
 </head>
 <body>
   <video autoplay muted loop class="bg-video">
-  <source src="*video*" type="video/mp4">
+  <source src="HP4 Race Isle of Man.mp4" type="video/mp4">
 </video>
 <div class="overlay"></div>
   <div class="container-fluid row">
     <form method="POST" class="col-4 m-auto">
+      <h1>Registrar</h1>
       <div class="mb-3">
-        <h1>Iniciar Sesion</h1>
         <label for="exampleInputEmail1" class="form-label">Usuario</label>
-        <input type="text" class="form-control" name="usuarioInicio">
+        <input type="text" class="form-control" name="usuario">
       </div>
       <div class="mb-3">
         <label for="exampleInputPassword1" class="form-label">Contraseña</label>
-        <input type="password" class="form-control" name="claveInicio">
+        <input type="password" class="form-control" name="clave">
       </div>
-      <button type="submit" class="btn btn-primary" name="iniciar">Iniciar Sesion</button>
+      <button type="submit" class="btn btn-primary" name="registrar">Registrar</button>
       <br></br>
       <div>
-        <a href="Register.php" class="btn btn-primary">Registrar</a>
+        <a href="Login.php" class="btn btn-primary">Iniciar Sesion</a>
       </div>
       <?php
-      include("controladorLogin.php");
+      include("../Backend/controladorRegistro.php");
       ?>
     </form>
   </div>
+  
 </body>
 </html>

@@ -10,7 +10,7 @@ if (isset($_POST["registrar"])) {
         $hash = password_hash($clave, PASSWORD_DEFAULT);
         $user = new User();
         $user->add($usuario,$hash,"usuario");
-        echo "registro exitoso";
+        echo "registro exitoso";    
     }
 }
 ?>

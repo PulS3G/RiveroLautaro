@@ -2,6 +2,6 @@
 session_start();
 session_unset();
 session_destroy();
-header("Location: Login.php?cerrado=1");
+header("Location: ../Frontend/Login.php?cerrado=1");
 exit();
 ?>

@@ -18,7 +18,7 @@ $id = $_GET["id"];
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 </head>
 <body>
-<a class="btn btn-primary" href="Admin.php">Volver</a>
+<a class="btn btn-primary" href="../Frontend/Admin.php">Volver</a>
   <div class="container-fluid p-4">
     <div class="row">
         <form method="POST" class="col-md-6">

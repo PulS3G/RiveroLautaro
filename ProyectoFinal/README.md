@@ -1,10 +1,16 @@
-#RiveroLautaro
+#RoigGalo/RiveroLautaro
 
+Este es el proyecto de nuestro 2do año de la carrera como Analistas y
+desarrolladores de Software
+en el mismo se nos solicita hacer un sistema con las tecnologias vistas en el año
+Php
+Css
+Js
+Html
 
-This is the final project of my 2nd year of the career as an Analist and Software developer.
+debido al diseño del sistema se ven faltante dos videos en login/registro y en la pagina main
+debido al peso no es debido subirlos a github.
+a su vez se le proporcionara el script con la basa de datos todas armada.
 
-The project include all the technologies we've seen through the year
-Php for Db and logic
-Js for scripts ang logic
-Html and css for design
-Sql for logic in db
+primer video : https://youtu.be/4PSbLBIvG8Q
+segundo video : https://youtu.be/ugZKd4mqvwQ

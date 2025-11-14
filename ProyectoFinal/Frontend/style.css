@@ -86,7 +86,7 @@ form:hover {
 
 #filtrosForm fieldset {
   display: flex;
-  flex-direction: row; 
+  flex-direction: column; 
   align-items: center;
   border: none;
   background: rgba(255, 255, 255, 0.5);
@@ -140,62 +140,71 @@ button:hover {
   margin-top: 20px;
   width: 100%;
 }
+.motos-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 24px;
+  padding: 40px 60px;
+  justify-items: center;
+}
+
+.motos-container::-webkit-scrollbar {
+  height: 8px;
+}
+
+
 .moto-card {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  background: #252525;
-  color: #fff;
-  border-radius: 12px;
+  flex: 0 0 260px; /* ancho fijo por tarjeta */
+  background: rgba(25, 25, 25, 0.55);
+  backdrop-filter: blur(10px) saturate(180%);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 16px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
   overflow: hidden;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
-  margin: 15px auto;
-  max-width: 600px;
-  min-height: 260px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-   backdrop-filter: blur(6px); 
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  color: #fff;
+  text-align: left;
+  cursor: pointer;
 }
 
 .moto-card:hover {
-  transform: scale(1.02);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+  transform: translateY(-5px);
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.45);
 }
-
-.moto-card {
-  flex: 1;
-  padding: 40px 40px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center; 
-  gap: 10px; 
-  min-width: 55%;
-}
-
-.moto-info h3 {
-  font-size: 1.5rem;
-  color: #d6d6d6;
-  margin-bottom: 14px;
-  margin-left: 10px;
-}
-
-.moto-card p {
-  font-size: 1.2rem;
-  line-height: 1.0;
-  color: #fff;
-  margin-left: 10px;
-  margin-top: 5px;
-}
-
-
-
 
 .moto-card img {
-  width: 60%;
-  height: 100%;
-  object-fit: contain;
-  filter: brightness(0.85);
-  mask-image: linear-gradient(to top, transparent 0%, black 90%);
-  -webkit-mask-image: linear-gradient(to top, transparent 0%, black 90%);
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.moto-info {
+  padding: 12px 16px;
+}
+
+.moto-info h4 {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: #f4f4f4;
+}
+
+.moto-info ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.moto-info li {
+  font-size: 0.85rem;
+  color: #ccc;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  padding: 4px 0;
+}
+
+.moto-info li:last-child {
+  border-bottom: none;
 }
 
 

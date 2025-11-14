@@ -1,21 +1,12 @@
 <?php
-if (session_status() === PHP_SESSION_NONE) {
     session_start();
-}
 
 if (!isset($_SESSION["usuarioInicio"])) {
     header("Location: Login.php?cerrado=1");
     exit();
 }
 
-require_once "User.php";
-if (isset($_GET['delete_user'])) {
-    $userId = intval($_GET['delete_user']); 
-    $user = new User();
-    $user->delete($userId); // llama al método delete de User.php
-    header("Location: Admin.php");
-    exit();
-}
+require_once "../Backend/User.php";
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -29,8 +20,8 @@ if (isset($_GET['delete_user'])) {
 <body>
 <nav class="navbar navbar-expand-lg bg-body-tertiary">
   <div class="container-fluid">
-    <a class="btn btn-primary" href="Logout.php">Cerrar Sesion</a>
-    <a class="btn btn-primary" href="agregarMoto.php">Agregar Moto</a>
+    <a class="btn btn-primary" href="../Backend/Logout.php">Cerrar Sesion</a>
+    <a class="btn btn-primary" href="../Backend/agregarMoto.php">Agregar Moto</a>
   </div>
 </nav>
 <div class="p-4 container-fluid">
@@ -46,6 +37,7 @@ if (isset($_GET['delete_user'])) {
         </thead>
         <tbody>
           <?php
+            include "../Backend/eliminarUsuario.php";
             $user = new User();
             $users = $user->getAll();
             foreach ($users as $u) {
@@ -79,8 +71,8 @@ if (isset($_GET['delete_user'])) {
         </thead>
         <tbody>
           <?php
-            include "eliminar.php";
-            require_once "Motos.php";
+            include "../Backend/eliminar.php";
+            require_once "../Backend/Motos.php";
             $moto = new Moto();
             $motos = $moto->getAll();
             foreach ($motos as $m) {
@@ -95,7 +87,7 @@ if (isset($_GET['delete_user'])) {
                 <td>" . $m['peso'] . "</td>
                 <td>
                   <a href='Admin.php?id={$m['id']}'>Eliminar</a>" . "-" .
-                  "<a href='editar.php?id={$m['id']}'>Editar</a>
+                  "<a href='../Backend/editar.php?id={$m['id']}'>Editar</a>
                 </td>
               </tr>";
             }
@@ -109,5 +101,5 @@ if (isset($_GET['delete_user'])) {
 </body>
 </html>
 <?php
-require_once "Motos.php";
+require_once "../Backend/Motos.php";
 ?>
