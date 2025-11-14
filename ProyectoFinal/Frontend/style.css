@@ -154,7 +154,7 @@ button:hover {
 
 
 .moto-card {
-  flex: 0 0 260px; /* ancho fijo por tarjeta */
+  flex: 0 0 260px;
   background: rgba(25, 25, 25, 0.55);
   backdrop-filter: blur(10px) saturate(180%);
   border: 1px solid rgba(255, 255, 255, 0.15);
