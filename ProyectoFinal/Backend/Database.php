@@ -1,7 +1,7 @@
 <?php
 class Database {
  private $host = "localhost";
- private $db = "motoweb2";
+ private $db = "motoweb";
  private $user = "root";
  private $pass = "";
  private $charset = "utf8mb4";
@@ -16,4 +16,5 @@ class Database {
  }
  }
 }
+
 ?>
